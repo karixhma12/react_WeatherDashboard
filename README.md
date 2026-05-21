@@ -1,18 +1,55 @@
-# React + Vite
+# 🌤 Weather Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A weather dashboard built with React, custom hooks, and Jotai for state management.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** https://react-weather-dashboard-hp04ibj9e-mitochondria1.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Concepts Covered
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Custom Hooks** — `useFetch`, `useDebounce`, `usePrev`, `useIsOnline`
+- **Jotai** — global state management for favourite cities
+- **Real API** — OpenWeatherMap API for live weather data
 
-Note: This will impact Vite dev & build performances.
+## Features
 
-## Expanding the ESLint configuration
+- 🔍 Search any city with debounced input
+- 🌡 View current and previous temperature
+- ⭐ Save and manage favourite cities
+- 🟢 Real-time online/offline status
+- 💎 Glassmorphism UI with dark theme
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Custom Hooks
+
+| Hook | Purpose |
+|------|---------|
+| `useFetch` | Fetches data from any URL with loading/error states |
+| `useDebounce` | Delays a value update until user stops typing |
+| `usePrev` | Returns the previous value of any state |
+| `useIsOnline` | Tracks browser online/offline status |
+
+## Tech Stack
+
+- React + Vite
+- Jotai (state management)
+- OpenWeatherMap API
+- Pure CSS (Glassmorphism)
+- Deployed on Vercel
+
+## Run Locally
+
+```bash
+git clone https://github.com/YOUR_USERNAME/weather-dashboard.git
+cd weather-dashboard
+npm install
+```
+
+Create a `.env` file:
+```
+VITE_WEATHER_API_KEY=your_api_key_here
+```
+
+```bash
+npm run dev
+```
