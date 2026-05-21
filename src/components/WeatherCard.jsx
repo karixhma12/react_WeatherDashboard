@@ -18,12 +18,11 @@ function WeatherCard({city}){
     }
 
     return(
-        <div>
-            <h2> {city} </h2>
-            <p> Current Temperature : {data?.main?.temp}°C</p>
-            <p> Previous Temperature : {prevTemp}°C </p>
-            <p> Description : {data?.weather?.[0]?.description} </p>
-
+        <div className="glass">
+            <h2 className="weather-city"> {city} </h2>
+            <p className="weather-temp"> Current Temperature : {data?.main?.temp}°C</p>
+            <p className="weather-temp"> Previous Temperature : {prevTemp}°C </p>
+            <p className="weather-desc"> Description : {data?.weather?.[0]?.description} </p>
         </div>
     )
    

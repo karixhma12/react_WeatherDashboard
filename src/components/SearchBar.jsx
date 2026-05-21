@@ -14,7 +14,7 @@ function SearchBar({onSearch}){
     },[debouncedValue])
 
     return(
-        <input value={inputValue} onChange={e=>{setInputValue(e.target.value)}}></input>   
+        <input className="search-input" placeholder="Search city..." value={inputValue} onChange={e=>{setInputValue(e.target.value)}}></input>   
     )
 }
 

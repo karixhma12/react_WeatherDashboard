@@ -4,8 +4,8 @@ import useIsOnline from "../hooks/useIsOnline";
 function StatusBar(){
     const isOnline = useIsOnline();
     return(
-        <div>
-            {isOnline ? <p>🟢online</p> : <p>🔴offline</p>}
+        <div className="status-bar">
+            {isOnline ? <><span>🟢</span><span>Online</span></> : <><span>🔴</span><span>Offline</span></>}
         </div>  
     )
 }

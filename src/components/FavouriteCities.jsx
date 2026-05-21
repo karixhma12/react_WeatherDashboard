@@ -15,13 +15,13 @@ function FavouriteCities({onCityClick}){
     }
 
     return(
-        <div>
-            <h3> Favourite Cities </h3>
+        <div className="glass">
+            <h3 className="fav=title"> ⭐ Favourite Cities </h3>
             {favourities.map(city=>{
                 return(
-                    <div key={city}>
-                        <span onClick={()=>{onCityClick(city)}}> {city} </span>
-                        <button onClick={()=>{removeCity(city)}}> Remove </button>
+                    <div key={city} className="fav-item">
+                        <span className="fav-city" onClick={()=>{onCityClick(city)}}> {city} </span>
+                        <button className="fav-remove" onClick={()=>{removeCity(city)}}> Remove </button>
                     </div>
                 )
             })
