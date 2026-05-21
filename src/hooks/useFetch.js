@@ -11,9 +11,11 @@ function useFetch(url){
             try{
                 const result = await fetch(url);
                 const response = await result.json();
+                console.log("Weather data:", response);
                 setData(response);
             }
             catch(err){
+                console.log("Fetch error:", err);
                 setError(err);
             }
             finally{

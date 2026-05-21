@@ -3,6 +3,7 @@ import useFetch from "../hooks/useFetch";
 
 function WeatherCard({city}){
     const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+    console.log("API KEY:" + apiKey);
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
     const {data,loading,error} = useFetch(url);
 

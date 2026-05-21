@@ -1,5 +1,5 @@
 import {useState} from "react";
-import { useSetRecoilState } from "recoil";
+import {useSetAtom} from "jotai";
 import { favouriteCitiesAtom } from "./store/atoms";
 import SearchBar from "./components/SearchBar";
 import StatusBar from "./components/StatusBar";
@@ -8,7 +8,8 @@ import FavouriteCities from "./components/FavouriteCities";
 
 function App(){
   const [city,setCity] = useState('London');
-  const setFavourites = useSetRecoilState(favouriteCitiesAtom);
+  console.log("city:", city);
+  const setFavourites = useSetAtom(favouriteCitiesAtom);
 
   const addToFavourities = ()=>{
     setFavourites((prev)=>{

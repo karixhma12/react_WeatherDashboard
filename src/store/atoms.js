@@ -1,6 +1,3 @@
-import {atom} from "recoil";
+import { atom } from 'jotai';
 
-export const favouriteCtiesAtom = atom({
-    key : "favouriteCities",
-    default : [],
-});
+export const favouriteCitiesAtom = atom([]);

@@ -1,8 +1,8 @@
-import {useRecoilState} from "recoil";
+import { useAtom } from 'jotai';
 import { favouriteCitiesAtom } from "../store/atoms";
 
 function FavouriteCities({onCityClick}){
-    const [favourities,setFavourites] = useRecoilState(favouriteCitiesAtom);
+    const [favourities,setFavourites] = useAtom(favouriteCitiesAtom);
 
     const removeCity = (cityToRemove)=>{
         setFavourites(favourities.filter(city=>(city!=cityToRemove)))

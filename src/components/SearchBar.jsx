@@ -8,7 +8,9 @@ function SearchBar({onSearch}){
     const debouncedValue = useDebounce(inputValue,500);
 
     useEffect(()=>{
-        onSearch(debouncedValue)
+        if(debouncedValue){
+            onSearch(debouncedValue)
+        }       
     },[debouncedValue])
 
     return(
